@@ -1,0 +1,33 @@
+﻿@model EpamBlog.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<div class="row no-margin-bot">
+    <div class="col s7 push-s1">
+        <div id="main-body" class="card">
+            <div class="row"></div>
+            <p class="flow-text welcome-text centralized">LogIn</p>
+            <p class="flow-text sub-welcome-text centralized">Not registred yet? @Html.RouteLink("Do it now!", new { controller = "Account", action = "Register" }, new { @class = "flow-text sub-welcome-text" })</p>
+            <hr class="colored-hr no-margin-vert" />
+            @Html.Partial("Partials/FormForLogin", Model)
+        </div>
+    </div>
+    <div class="col s3 push-s1">
+        <div class="row">
+            @Html.Partial("../Partials/Loginblock")
+        </div>
+        <div class="row">
+            <div id="right-sidebar" class="card centralized">
+                <div class="row"></div>
+                <p class="card-title flow-text">Menu</p>
+                <div class="collection with-header">
+                    @Html.RouteLink("Home", new { controller = "Home", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Reviewes", new { controller = "Reviews", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Quize", new { controller = "Quize", action = "Index" }, new { @class = "collection-item" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

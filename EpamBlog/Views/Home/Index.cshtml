@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EpamBlog.ViewModels.Article>
+
+@{
+    ViewBag.Title = "Home";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="~/Scripts/cookie.js"></script>
+<script type="text/javascript">    
+    if (!$.cookie('rememberUser')) {
+        var delay_popup = 5000;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+    }
+    document.cookie = "rememberUser=rememberUser";
+</script>
+<div id="overlay">
+    <div class="popup">
+        <h2 class="centralized">Welcome!</h2>
+        <p class="centralized">
+            Engineering is in our DNA. Since 1993, we’ve helped the world’s leading companies imagine, design, engineer, and deliver software that changes the world. Today, we are more than developers. Our offices are digital laboratories. Our clients are major global brands. And we’re always looking for talented teammates.        </p>
+        <div class="pl-left">
+            <div class="card centralized no-margin-bot">
+                <div class="card-image">
+                    <img src="~/Content/Images/epam-company.jpg" />
+                </div>
+            </div>
+        </div>
+       
+        <button class="close" title="Close" onclick="document.getElementById('overlay').style.display='none';"></button>
+    </div>
+</div>
+<div class="row no-margin-bot">
+    <div class="col s7 push-s1">
+        <div id="main-body" class="card">
+            <div class="row"></div>
+            <p class="flow-text welcome-text centralized">Feed</p>
+            <p class="flow-text sub-welcome-text centralized">Hope you'll find something interesting here</p>
+            <hr class="colored-hr" />
+            <div id="article_target" class="row">
+                @Html.Partial("Partials/ArticleList", Model)
+            </div>
+        </div>
+    </div>
+    <div class="col s3 push-s1">
+        <div class="row">
+            @Html.Partial("../Partials/LoginBlock")
+        </div>
+        <div class="row">
+            <div id="right-sidebar" class="card centralized">
+                <div class="row"></div>
+                <p class="card-title flow-text">Menu</p>
+                <div class="collection with-header">
+                    @Html.RouteLink("Home", new { controller = "Home", action = "Index" }, new { @class = "collection-item active" })
+                    @Html.RouteLink("Reviewes", new { controller = "Reviews", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Quize", new { controller = "Quize", action = "Index" }, new { @class = "collection-item" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

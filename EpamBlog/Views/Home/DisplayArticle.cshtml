@@ -1,0 +1,70 @@
+﻿@model EpamBlog.ViewModels.Article
+
+@using EpamBlog.Helpers;
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="row no-margin-bot">
+    <div class="col s7 push-s1">
+        <div id="main-body" class="card">
+            <div class="row"></div>
+            <div class="row">
+                <div class="col s2 push-s1">
+                    <img src="~/Content/Images/article-image.png" height="100" width="100" alt="" class="circle responsive-img">
+                </div>
+                <div class="col s8 push-s1 centralized">
+                    <p class="flow-text black-text">@Model.Name</p>
+                    <hr class="colored-hr no-margin-vert" />
+                </div>
+            </div>
+            <div class="row"></div>
+            <div id="article_target" class="row">
+                <div class="col s10 push-s1">
+                    <div class="row">
+                        <div class="col s12">
+                            @Html.WriteHtml(Model.Text.Replace("\r\n", "<br>"))
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s10 push-s1">
+                            <p class="flow-text tag-text">
+                                Tags:
+                                @if (Model.Tags != null)
+                                {
+                                    foreach (var tag in Model.Tags)
+                                    {
+                                        <a href="~/Home/Search?tag=@tag" class="main-color-text tag-item">@(tag)</a>
+                                            <span class="flow-text">  </span>
+                                    }
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4 push-s8">
+                            <p class="flow-text sub-welcome-text right-align">@Model.Date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s3 push-s1">
+        <div class="row">
+            @Html.Partial("../Partials/LoginBlock")
+        </div>
+        <div class="row">
+            <div id="right-sidebar" class="card centralized">
+                <div class="row"></div>
+                <p class="card-title flow-text">Menu</p>
+                <div class="collection with-header">
+                    @Html.RouteLink("Home", new { controller = "Home", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Reviwes", new { controller = "Reviws", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Quize", new { controller = "Quize", action = "Index" }, new { @class = "collection-item" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

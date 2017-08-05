@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\b\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll.config
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\b\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\b\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\i\BusinessLogicLayer\Debug\BusinessLogicLayer.dll
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\i\BusinessLogicLayer\Debug\BusinessLogicLayer.pdb

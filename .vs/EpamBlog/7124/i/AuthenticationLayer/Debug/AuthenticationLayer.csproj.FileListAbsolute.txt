@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\b\AuthenticationLayer\bin\Debug\AuthenticationLayer.dll.config
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\b\AuthenticationLayer\bin\Debug\AuthenticationLayer.dll
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\b\AuthenticationLayer\bin\Debug\AuthenticationLayer.pdb
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\i\AuthenticationLayer\Debug\AuthenticationLayer.dll
+C:\Users\User\Desktop\Норм Блог\.vs\EpamBlog\7124\i\AuthenticationLayer\Debug\AuthenticationLayer.pdb

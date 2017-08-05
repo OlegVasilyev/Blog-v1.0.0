@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EpamBlog.ViewModels.Article>
+
+@using EpamBlog.Helpers;
+
+@if (Model.Count() == 0)
+{
+    <p class="flow-text centralized welcome-text">There are no articles yet..</p>
+}
+else
+{
+    foreach (var item in Model.Reverse())
+    {
+        <div class="row">
+            <div class="col s10 push-s1">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="~/Content/Images/article-image.png" height="100" width="100" alt="" class="circle responsive-img">
+                            </div>
+                            <div class="col s10 centralized">
+                                @Html.ActionLink(item.Name, "DisplayArticle", new { controller = "Home", id = item.Id }, new { @class = "flow-text black-text article-title" })
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col s12">
+                                @{
+                                    string text = item.Text.Replace("\r\n", "☼");
+                                    if (text.Length > 250)
+                                    {
+                                        @Html.WriteHtml(text.Substring(0, 200).Replace("☼", "<br>") + " ... ")
+                                    }
+                                    else
+                                    {
+                                        @Html.WriteHtml("<p>" + text.Replace("☼", "<br>") + " </p>")
+                                    }
+                                }
+                                @Html.ActionLink("show more", "DisplayArticle", new { controller = "Home", id = item.Id })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s4 push-s8">
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  }
+}

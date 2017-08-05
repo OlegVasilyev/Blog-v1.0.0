@@ -1,0 +1,90 @@
+﻿body {
+    background: #a4bdd1 center url(Images/back-image.jpg) no-repeat fixed;
+}
+
+.header-right {
+    background-color: rgb(0, 148, 255);
+}
+
+.no-margin-bot {
+    margin-bottom: 0;
+}
+
+.no-margin-vert {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-hor {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.centralized {
+    text-align: center;
+}
+
+.footer-copyright {
+    margin: 10px;
+}
+
+.to-the-top {
+    height: 50px;
+    font-size: 24px;
+}
+
+.welcome-text {
+    font-size: 24px;
+}
+
+.sub-welcome-text {
+    font-size: 16px;
+}
+
+.text-danger {
+    color: tomato;
+}
+
+.colored-hr {
+    border: 2px solid rgb(119, 196, 217);
+}
+
+.write-article-text {
+    font-size: 24px;
+    padding-left: 40px;
+}
+
+.question-text {
+    font-size: 20px;
+}
+
+.main-color-text {
+    color: rgb(57, 160, 189);
+}
+
+.article-title:hover {
+    text-decoration: underline;
+}
+
+.tag-text {
+    font-size: 20px;
+}
+
+.tag-item:hover {
+    text-decoration: underline;
+}
+
+.admin-menu-item {
+    height: 200px;
+}
+#leftUP {
+    position: fixed;
+    text-align: left;
+}
+#up {
+    width: 140px;
+}

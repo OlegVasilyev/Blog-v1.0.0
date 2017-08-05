@@ -1,0 +1,33 @@
+﻿@model Exception
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = "Error";
+}
+
+<div class="row no-margin-bot">
+    <div class="col s7 push-s1">
+        <div id="main-body" class="card">
+            <div class="row"></div>
+            <p class="flow-text welcome-text centralized">Error</p>
+            <hr class="colored-hr no-margin-vert" />
+
+            <div id="error_target" class="row">
+                <p class="flow-text sub-welcome-text centralized">@Model.Message</p>
+            </div>
+        </div>
+    </div>
+    <div class="col s3 push-s1">
+        <div class="row">
+            <div id="right-sidebar" class="card centralized">
+                <div class="row"></div>
+                <p class="card-title flow-text">Menu</p>
+                <div class="collection with-header">
+                    @Html.RouteLink("Home", new { controller = "Home", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Reviewes", new { controller = "Review", action = "Index" }, new { @class = "collection-item" })
+                    @Html.RouteLink("Quize", new { controller = "Quize", action = "Index" }, new { @class = "collection-item" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
